@@ -178,7 +178,7 @@ scp -r /root/work/hadoop-2.6.0 slave2:/root/work/
 #### hadoop初始化
 首次启动需要先在 Master 节点执行 NameNode 的格式化:
 ```
-cd /root/work//hadoop-2.6.0/sbin/
+cd /root/work//hadoop-2.6.0/bin/
 hdfs namenode -format       # 首次运行需要执行初始化，之后不需要
 ```
 完成后，启动hadoop：
