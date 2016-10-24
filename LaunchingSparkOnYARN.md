@@ -274,8 +274,8 @@ cd /root/work/spark-2.0.0/sbin/
 
 
 ####備忘紀事
-#### 環境配置
- * spark 設置
+
+* spark參數設置
  
 ```
 #以下兩者皆需填入
@@ -283,11 +283,12 @@ spark.driver.memory
 spark.executor.memory → 代表每個執行機所可使用的內存量 
 ```
 
- * python
-   三台環境需配置一樣，包含python版本，因為同步版本出現無法運行的錯誤
-   
-#### 環境變量
-添加環境變量 vim /home/root/profile
+* python環境提醒
+  三台環境需配置一樣，包含python版本，因為同步版本出現無法運行的錯誤
+
+  
+* 添加環境變量：vim /home/root/profile
+
 ```
 export WORK_SPACE=/root/work/
 #java env
