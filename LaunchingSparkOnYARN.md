@@ -275,14 +275,37 @@ cd /root/work/spark-2.0.0/sbin/
 
 ####備忘紀事
 #### 環境配置
-    * spark 設置
-      ```
-        #以下兩者皆需填入
-        spark.driver.memory
-        spark.executor.memory → 代表每個執行機所可使用的內存量 
-      ```
-    * python
-      三台環境需配置一樣，包含python版本，因為同步版本出現無法運行的錯誤
+ * spark 設置
+ 
+```
+#以下兩者皆需填入
+spark.driver.memory
+spark.executor.memory → 代表每個執行機所可使用的內存量 
+```
+
+ * python
+   三台環境需配置一樣，包含python版本，因為同步版本出現無法運行的錯誤
+   
+#### 環境變量
+添加環境變量 vim /home/root/profile
+```
+export WORK_SPACE=/root/work/
+#java env
+export JAVA_HOME=/usr/java/jdk1.8.0_91/
+export JRE_HOME=/usr/java/jdk1.8.0_91/jre
+export PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/sbin
+export CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JRE_HOME/lib
+
+#hadoop env
+export HADOOP_HOME=/root/work/hadoop-2.6.0
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+#spark env
+export SPARK_HOME=/root/work/spark-2.0.0
+export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+
+```
+
 ---
 ## CHANGELOG
 20160819 零丁创建
